@@ -14,4 +14,16 @@ function onUpdateTime (data) {
 
 
 const currentTime = localStorage.getItem("videoplayer-current-time");
-player.setCurrentTime(currentTime);
+player.setCurrentTime(currentTime).then(function(seconds) {
+ 
+}).catch(function(error) {
+  switch (error.name) {
+      case 'RangeError':
+          
+          break;
+
+      default:
+          
+          break;
+  }
+});
